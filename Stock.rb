@@ -13,11 +13,11 @@ class Stock
   def able_to_buy #お金投入時点んで購入できるドリンクの情報を表示
     @drinks.each do |drink|
       if drink[:stock] == 0
-          puts "#{drink[:name]}は在庫がありません。"
+        puts "#{drink[:name]}は在庫がありません。"
       elsif @slot_money >= drink[:price]
-          puts "#{drink[:name]}を購入できます。"
+        puts "#{drink[:name]}を購入できます。"
       else
-          puts "#{drink[:name]}を購入するには、"+(drink[:price]-@slot_money).to_s+"円不足しています。"
+        puts "#{drink[:name]}を購入するには、"+(drink[:price]-@slot_money).to_s+"円不足しています。"
       end
     end
   end
