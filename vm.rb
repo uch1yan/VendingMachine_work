@@ -1,7 +1,7 @@
 require './Stock'
 
 class VendingMachine 
-  attr_accessor :sales, :stock, :drink, :drinks, :slot_money
+  attr_accessor :stock, :drink, :drinks, :slot_money
 
   MONEY = [10, 50, 100, 500, 1000].freeze
 

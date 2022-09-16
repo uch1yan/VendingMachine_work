@@ -1,7 +1,8 @@
 require './drinks'
 
 class Stock 
-  attr_accessor :drinks, :money_data
+  attr_reader :drinks
+  attr_accessor :money_data
 
   def initialize 
     @beverage = Drinks.new
