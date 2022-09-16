@@ -1,19 +1,16 @@
 require './Stock'
 
 class VendingMachine 
-  include Drinks
-  attr_accessor :user_slot_money, :sales, :stock, :drink, :drinks
+  attr_accessor :sales, :stock, :drink, :drinks
 
   MONEY = [10, 50, 100, 500, 1000].freeze
 
   def initialize
-    @user_slot_money = 0
     @stock = Stock.new
   end
 
   def slot_money_setting(money) #自販機にお金を投入する処理。MONEYに含まれていないお金が投入された場合は返却する
-    @user_slot_money += money
-    puts MONEY.include?(money) ? @stock.slot_money += @user_slot_money : "#{money}円は使用できません"    
+    puts MONEY.include?(money) ? @stock.slot_money += money : "#{money}円は使用できません"    
   end 
 
   def choose_drink(want_to_buy) #ユーザーがドリンクを選ぶ処理
